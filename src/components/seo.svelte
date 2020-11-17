@@ -1,6 +1,6 @@
 <script>
   import { stores } from '@sapper/app'
-  import config from '~/site.config.yml'
+  import config from '../site.config'
 
   const { page } = stores()
   const { siteName, siteUrl } = config

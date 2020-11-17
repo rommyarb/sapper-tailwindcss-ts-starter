@@ -3,9 +3,6 @@
 </script>
 
 <style>
-  h1 {
-    @apply text-primary;
-  }
   hr {
     @apply border-none;
     border-bottom: 4px dashed #EEE;

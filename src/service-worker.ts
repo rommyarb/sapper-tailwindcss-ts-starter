@@ -7,18 +7,19 @@ const ASSETS = `cache${timestamp}`
 const to_cache = shell.concat(files)
 const cached = new Set(to_cache)
 
-self.addEventListener('install', event => {
+self.addEventListener('install', (event: ExtendableEvent) => {
   event.waitUntil(
     caches
       .open(ASSETS)
       .then(cache => cache.addAll(to_cache))
       .then(() => {
-        self.skipWaiting()
+        // self.skipWaiting()
+        (self as any as ServiceWorkerGlobalScope).skipWaiting()
       })
   )
 })
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', (event: ExtendableEvent) => {
   event.waitUntil(
     caches.keys().then(async keys => {
       // delete old caches
@@ -26,12 +27,13 @@ self.addEventListener('activate', event => {
         if (key !== ASSETS) await caches.delete(key)
       }
 
-      self.clients.claim()
+      // self.clients.claim()
+      (self as any as {clients:Clients}).clients.claim();
     })
   )
 })
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event: FetchEvent) => {
   if (event.request.method !== 'GET' || event.request.headers.has('range')) return
 
   const url = new URL(event.request.url)
@@ -52,11 +54,11 @@ self.addEventListener('fetch', event => {
   // which Sapper has generated for you. It's not right for every
   // app, but if it's right for yours then uncomment this section
   /*
-	if (url.origin === self.origin && routes.find(route => route.pattern.test(url.pathname))) {
-		event.respondWith(caches.match('/service-worker-index.html'));
-		return;
-	}
-	*/
+  if (url.origin === self.origin && routes.find(route => route.pattern.test(url.pathname))) {
+    event.respondWith(caches.match('/service-worker-index.html'));
+    return;
+  }
+  */
 
   if (event.request.cache === 'only-if-cached') return
 
