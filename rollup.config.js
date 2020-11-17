@@ -12,6 +12,7 @@ import pkg from './package.json'
 import { mdsvex } from 'mdsvex'
 import image from 'svelte-image'
 import svelteSVG from 'rollup-plugin-svelte-svg'
+import typescript from "@rollup/plugin-typescript";
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
@@ -53,7 +54,7 @@ const svelteOptions = {
 
 export default {
   client: {
-    input: config.client.input(),
+    input: config.client.input().replace(/\.js$/, '.ts'),
     output: config.client.output(),
     plugins: [
       replace({
@@ -70,6 +71,7 @@ export default {
         dedupe: ['svelte']
       }),
       commonjs(),
+			typescript({ sourceMap: dev }),
       alias(aliasPath),
       yaml(),
       svelteSVG({ dev }),
@@ -109,7 +111,7 @@ export default {
   },
 
   server: {
-    input: config.server.input(),
+    input: { server: config.server.input().server.replace(/\.js$/, ".ts") },
     output: config.server.output(),
     plugins: [
       replace({
@@ -125,6 +127,7 @@ export default {
         dedupe: ['svelte']
       }),
       commonjs(),
+			typescript({ sourceMap: dev }),
       alias(aliasPath),
       yaml(),
       svelteSVG({ generate: 'ssr', dev })
@@ -136,7 +139,7 @@ export default {
   },
 
   serviceworker: {
-    input: config.serviceworker.input(),
+    input: config.serviceworker.input().replace(/\.js$/, '.ts'),
     output: config.serviceworker.output(),
     plugins: [
       resolve(),
@@ -145,6 +148,7 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode)
       }),
       commonjs(),
+			typescript({ sourceMap: dev }),
       !dev && terser()
     ],
 

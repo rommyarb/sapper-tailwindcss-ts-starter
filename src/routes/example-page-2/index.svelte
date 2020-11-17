@@ -1,7 +1,7 @@
 <script>
   import Fuse from 'fuse.js'
-  import { filterByTags } from '~/utils/filter.js'
-  import { createQueryParamSet } from '~/utils/query-params.js'
+  import { filterByTags } from '~/utils/filter.ts'
+  import { createQueryParamSet } from '~/utils/query-params.ts'
   import SEO from '~/components/seo.svelte'
   import BoxCode from '~/components/ui/box-code.svelte'
   import codes from './_data.yml'
