@@ -1,6 +1,6 @@
 {
-  "name": "sapper-tailwindcss-ts-template",
-  "description": "Template for Sapper + TailwindCSS with TypeScript",
+  "name": "sapper-tailwindcss-ts-starter",
+  "description": "Starter template for Sapper + TailwindCSS with TypeScript",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {

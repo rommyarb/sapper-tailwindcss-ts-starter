@@ -1,6 +1,6 @@
-# Sapper + TailwindCSS + TypeScript Template
+# Sapper + TailwindCSS + TypeScript Starter
 
-Inspired from [svelteid/website](https://github.com/svelteid/website).
+Sapper starter template, inspired by [svelteid/website](https://github.com/svelteid/website).
 
 ```bash
 # install dependencies
