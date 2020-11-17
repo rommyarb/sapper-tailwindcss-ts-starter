@@ -1,6 +1,6 @@
 # Sapper + TailwindCSS + TypeScript Starter
 
-Sapper starter template, inspired by [svelteid/website](https://github.com/svelteid/website).
+Sapper starter template, forked from [svelteid/website](https://github.com/svelteid/website).
 
 ```bash
 # get this template
