@@ -26,7 +26,7 @@
 <section>
   <div class="text-center mt-6">
     {#if iconVisible}
-      <div class="w-32 inline-block">
+      <div class="w-20 md:w-32 inline-block">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 124" id="svelte-logo">
             <g out:fade={{ duration: 200 }}>
@@ -41,14 +41,13 @@
       </div>
     {/if}
 
-    <div class="text-xl md:w-1/2 md:text-4xl mt-5">
+    <div class="text-xl md:w-1/2 md:text-4xl mt-5 mx-auto">
       Hello, you are using
       <span class="text-primary">Sapper</span>
       +
       <span class="text-teal-600">TailwindCSS</span>
       with
-      <strong class="text-blue-700">TypeScript</strong>
-      template.
+      <strong class="text-blue-700">TypeScript</strong>.
     </div>
     <div class="mt-4 text-3xl md:mt-0 md:text-6xl">🎉🎉🎉</div>
   </div>

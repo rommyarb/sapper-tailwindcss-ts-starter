@@ -12,7 +12,7 @@
     <div class="h-16 p-4 flex gap-3 items-center">
       <img src="images/logo.png" class="h-full object-contain" alt="" />
       <a href="/" class="text-center text-xl ml-2 text-primary flex-no-wrap">Sapper<span
-          class="text-black">+</span><span class="text-teal-600">TailwindCSS</span></a>
+          class="text-gray-700">+</span><span class="text-teal-600">TailwindCSS</span></a>
     </div>
 
     <ul class="list-none flex justify-between items-center">

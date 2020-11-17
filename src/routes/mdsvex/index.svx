@@ -14,7 +14,7 @@
 
 <SEO title="MDsveX Page Example" />
 
-<div class="text-center mt-20">
+<div class="mx-auto px-3 md:w-1/2 mt-20">
 # Hello this is Markdown text
 
 ---
