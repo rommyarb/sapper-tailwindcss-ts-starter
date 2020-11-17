@@ -41,7 +41,7 @@
       </div>
     {/if}
 
-    <div class="text-xl md:text-4xl mt-5">
+    <div class="text-xl md:w-1/2 md:text-4xl mt-5">
       Hello, you are using
       <span class="text-primary">Sapper</span>
       +
