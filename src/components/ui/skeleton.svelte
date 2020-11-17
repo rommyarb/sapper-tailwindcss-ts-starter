@@ -1,6 +1,6 @@
 <script>
-  export let w = '100%';
-  export let h = '2rem';
+  export let w = '100%'
+  export let h = '2rem'
 </script>
 
 <style>

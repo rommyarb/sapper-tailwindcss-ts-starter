@@ -1,12 +1,12 @@
 <script>
-  export let url;
-  export let type;
-  export let title;
-  export let description;
-  export let tags;
-  export let selectedTags;
+  export let url
+  export let type
+  export let title
+  export let description
+  export let tags
+  export let selectedTags
 
-  import { scale } from 'svelte/transition';
+  import { scale } from 'svelte/transition'
 </script>
 
 <style>

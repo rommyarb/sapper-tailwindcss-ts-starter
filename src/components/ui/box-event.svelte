@@ -1,14 +1,14 @@
 <script>
-  import Skeleton from './skeleton.svelte';
-  import formatDate from '../utils/format-date';
-  import { getStructuredEvent } from '../services/eventbrite';
+  import Skeleton from './skeleton.svelte'
+  import formatDate from '../utils/format-date'
+  import { getStructuredEvent } from '../services/eventbrite'
 
-  export let event = {};
-  $: isLoading = Object.keys(event).length === 0 && event.constructor === Object;
+  export let event = {}
+  $: isLoading = Object.keys(event).length === 0 && event.constructor === Object
 
-  let query = getStructuredEvent(event.status === 'completed' ? event.id : null);
+  let query = getStructuredEvent(event.status === 'completed' ? event.id : null)
   $: streamUrl =
-    $query.isSuccess && Array.isArray($query.data.modules) ? $query.data.modules[0].data.livestream_url.url : null;
+    $query.isSuccess && Array.isArray($query.data.modules) ? $query.data.modules[0].data.livestream_url.url : null
 </script>
 
 <style>

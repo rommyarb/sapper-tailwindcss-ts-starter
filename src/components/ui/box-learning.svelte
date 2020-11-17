@@ -1,10 +1,10 @@
 <script>
-  import { scale } from 'svelte/transition';
+  import { scale } from 'svelte/transition'
 
-  export let url;
-  export let type;
-  export let title;
-  export let description;
+  export let url
+  export let type
+  export let title
+  export let description
 </script>
 
 <style>

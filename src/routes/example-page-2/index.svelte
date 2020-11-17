@@ -86,8 +86,8 @@
 
 <section class="container prose prose-lg bg-gray-100 min-h-screen py-10 mt-1">
   <header class="text-center mb-4">
-    <h2 class="heading">KODE</h2>
-    <span class="uppercase">Mencari Library atau Boilerplate berbasis Svelte?</span>
+    <h2 class="heading">Let's Code</h2>
+    <span class="uppercase">Looking for Svelte-related library?</span>
   </header>
 
   <div class="w-full flex justify-center mb-4">
@@ -105,7 +105,7 @@
           <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       </span>
-      <input type="search" bind:value={searchterm} class="input" placeholder="Cari sesuatu..." />
+      <input type="search" bind:value={searchterm} class="input" placeholder="Type something..." />
     </div>
   </div>
 
