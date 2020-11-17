@@ -1,26 +1,29 @@
-# @svelteid/website
+# Sapper + TailwindCSS + TypeScript Template
 
-Repositori ini merupakan _source code_ untuk [sveltejs.id](https://sveltejs.id).
-
-## Menjalankan proyek
-
-Bagaimanapun Anda mendapatkan kodenya, Anda dapat menginstal dependensi dan menjalankan proyek dalam mode pengembangan dengan:
+Inspired from [svelteid/website](https://github.com/svelteid/website).
 
 ```bash
-# kopi contoh berkas env
-cp .env.example .env
+# install dependencies
+yarn
 
-# instal dependensi
-npm install
+# start local development
+yarn dev
 
-# menjalankan secara lokal di `localhost:3000`
-npm run dev
+# publish/deploy
+yarn export
 ```
 
-## Berkontribusi
+## Features
+- TypeScript v4
+- TailwindCSS v1
+- Image Optimization ([svelte-image](https://github.com/matyunya/svelte-image))
+- Markdown Component ([MDsveX](https://github.com/pngwn/MDsveX))
+- ESLint
+- PostCSS + PurgeCSS
 
-Kami menerima _pull requests_ dari siapapun! Silakan membaca [Panduan Berkontribusi](CONTRIBUTING.md) untuk informasi lebih lanjut.
 
-## Kredit
+## Contribute
+We need your PRs.
 
-Dibuat dengan [Sapper](https://sapper.svelte.dev).
+## Credits
+Made with [Sapper](https://sapper.svelte.dev).

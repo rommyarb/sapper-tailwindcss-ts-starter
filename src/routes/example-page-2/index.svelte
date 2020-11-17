@@ -1,40 +1,40 @@
 <script>
-  import Fuse from 'fuse.js';
-  import { filterByTags } from '~/utils/filter.js';
-  import { createQueryParamSet } from '~/utils/query-params.js';
-  import SEO from '~/components/seo.svelte';
-  import BoxCode from '~/components/ui/box-code.svelte';
-  import codes from './_data.yml';
+  import Fuse from 'fuse.js'
+  import { filterByTags } from '~/utils/filter.js'
+  import { createQueryParamSet } from '~/utils/query-params.js'
+  import SEO from '~/components/seo.svelte'
+  import BoxCode from '~/components/ui/box-code.svelte'
+  import codes from './_data.yml'
 
-  let tags = [...new Set(codes.map(code => code.tags.split(',').map(x => x.trim())).flat())];
+  let tags = [...new Set(codes.map(code => code.tags.split(',').map(x => x.trim())).flat())]
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth'
-    });
-  };
+    })
+  }
 
-  const selectedTags = createQueryParamSet('tag');
-  $: selectedResources = filterByTags(codes, $selectedTags);
-  $: $selectedTags, typeof window !== 'undefined' && scrollToTop();
+  const selectedTags = createQueryParamSet('tag')
+  $: selectedResources = filterByTags(codes, $selectedTags)
+  $: $selectedTags, typeof window !== 'undefined' && scrollToTop()
 
-  let searchterm = '';
-  let searchResults = null;
+  let searchterm = ''
+  let searchResults = null
   $: {
     if (searchterm) {
       const options = {
         keys: ['type', 'title', 'description', 'tags']
-      };
-      scrollToTop();
-      const fuse = new Fuse(selectedResources, options);
-      searchResults = fuse.search(searchterm).map(data => data.item);
+      }
+      scrollToTop()
+      const fuse = new Fuse(selectedResources, options)
+      searchResults = fuse.search(searchterm).map(data => data.item)
     } else {
-      searchResults = null;
+      searchResults = null
     }
   }
-  $: results = searchResults || selectedResources;
+  $: results = searchResults || selectedResources
 </script>
 
 <style>

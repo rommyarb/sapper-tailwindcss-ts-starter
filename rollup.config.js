@@ -1,44 +1,39 @@
-import resolve from '@rollup/plugin-node-resolve';
-import replace from '@rollup/plugin-replace';
-import commonjs from '@rollup/plugin-commonjs';
-import svelte from 'rollup-plugin-svelte';
-import babel from '@rollup/plugin-babel';
-import alias from '@rollup/plugin-alias';
-import yaml from '@rollup/plugin-yaml';
-import { terser } from 'rollup-plugin-terser';
-import sveltePreprocess from 'svelte-preprocess';
-import config from 'sapper/config/rollup.js';
-import pkg from './package.json';
-import { mdsvex } from 'mdsvex';
-import image from 'svelte-image';
-import svelteSVG from 'rollup-plugin-svelte-svg';
+import resolve from '@rollup/plugin-node-resolve'
+import replace from '@rollup/plugin-replace'
+import commonjs from '@rollup/plugin-commonjs'
+import svelte from 'rollup-plugin-svelte'
+import babel from '@rollup/plugin-babel'
+import alias from '@rollup/plugin-alias'
+import yaml from '@rollup/plugin-yaml'
+import { terser } from 'rollup-plugin-terser'
+import sveltePreprocess from 'svelte-preprocess'
+import config from 'sapper/config/rollup.js'
+import pkg from './package.json'
+import { mdsvex } from 'mdsvex'
+import image from 'svelte-image'
+import svelteSVG from 'rollup-plugin-svelte-svg'
 
-const mode = process.env.NODE_ENV;
-const dev = mode === 'development';
-const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+const mode = process.env.NODE_ENV
+const dev = mode === 'development'
+const legacy = !!process.env.SAPPER_LEGACY_BUILD
 
-const dotenv = require('dotenv').config().parsed;
+const dotenv = require('dotenv').config().parsed
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
   (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
   warning.code === 'THIS_IS_UNDEFINED' ||
-  onwarn(warning);
+  onwarn(warning)
 
 const aliasPath = {
   entries: [{ find: '~', replacement: 'src' }]
-};
+}
 
-const extensions = ['.svelte', '.svx'];
+const extensions = ['.svelte', '.svx']
 
 const svelteImageOptions = {
-  placeholder: 'trace',
-  trace: {
-    threshold: 120,
-    color: '#ff3c00',
-    background: '#fff'
-  }
-};
+  placeholder: 'blur'
+}
 
 const svelteOptions = {
   dev,
@@ -54,7 +49,7 @@ const svelteOptions = {
     mdsvex(),
     image(svelteImageOptions)
   ]
-};
+}
 
 export default {
   client: {
@@ -156,4 +151,4 @@ export default {
     preserveEntrySignatures: false,
     onwarn
   }
-};
+}

@@ -1,6 +1,6 @@
 {
-	"name": "Svelte Indonesia",
-	"short_name": "Svelte ID",
+	"name": "Sapper TailwindCSS Template",
+	"short_name": "Sapper TailwindCSS TS",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"theme_color": "#ff3c00",

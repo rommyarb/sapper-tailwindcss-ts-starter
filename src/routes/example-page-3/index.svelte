@@ -1,11 +1,13 @@
 <script>
-  import SEO from '~/components/seo.svelte';
+  import SEO from '~/components/seo.svelte'
 </script>
 
 <SEO title="Meetup" />
 
-<section class="text-lg h-screen flex flex-col justify-center items-center">
-  <p class="my-4">Halaman ini sedang dalam tahap perbaikan</p>
+<section class="mt-20 text-lg flex flex-col justify-center items-center">
+  <p class="text-6xl">🚧</p>
+  <p>Coming soon.</p>
+  <p class="text-2xl">This page is under construction.</p>
 </section>
 
 <!--<script>

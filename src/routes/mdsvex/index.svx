@@ -1,0 +1,35 @@
+<script>
+  import SEO from "~/components/seo.svelte";
+</script>
+
+<style>
+  h1 {
+    @apply text-primary;
+  }
+  hr {
+    @apply border-none;
+    border-bottom: 4px dashed #EEE;
+  }
+  p, li {
+    @apply font-light;
+  }
+</style>
+
+<SEO title="MDsveX Page Example" />
+
+<div class="text-center mt-20">
+# Hello this is Markdown text
+
+---
+
+This is a URL: **[rommyarb.dev](https://rommyarb.dev)**
+
+---
+
+This is a list:
+1. Eat
+2. Code
+3. Sleep
+
+</div>
+

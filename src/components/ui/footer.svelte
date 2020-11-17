@@ -5,13 +5,13 @@
   }
 </style>
 
-<footer class="bg-gray-900 text-gray-300 py-6 px-2 md:px-6 flex flex-col text-center text-sm">
-  <p>&copy; Svelte ID 2020</p>
+<footer class="bg-teal-600 text-gray-300 py-6 px-2 md:px-6 flex flex-col text-center text-sm">
+  <p>This is a {'<footer/>'}</p>
   <p>
-    Mau berkontribusi? Lihat
-    <a href="https://github.com/svelteid/website/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">
-      cara berkontribusi
+    Contribute? Check out
+    <a href="https://github.com/rommyarb/sapper-tailwindcss-ts-template" target="_blank" rel="noopener noreferrer">
+      sapper-tailwind-ts-template
     </a>
-    di Github
+    on Github
   </p>
 </footer>

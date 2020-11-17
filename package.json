@@ -1,7 +1,7 @@
 {
-  "name": "@svelteid/website",
-  "description": "website for svelte id community",
-  "version": "1.0.0",
+  "name": "sapper-tailwindcss-ts-template",
+  "description": "Template for Sapper + TailwindCSS with TypeScript",
+  "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev --ext \".svelte .svx\"",
     "predev": "npm run build:tw",

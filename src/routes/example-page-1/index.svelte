@@ -1,7 +1,7 @@
 <script>
-  import SEO from '~/components/seo.svelte';
-  import BoxLearning from '~/components/ui/box-learning.svelte';
-  import learnings from './_data.yml';
+  import SEO from '~/components/seo.svelte'
+  import BoxLearning from '~/components/ui/box-learning.svelte'
+  import learnings from './_data.yml'
 </script>
 
 <SEO title="Materi Pembelajaran" />
