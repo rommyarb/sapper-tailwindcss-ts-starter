@@ -3,6 +3,9 @@
 Sapper starter template, inspired by [svelteid/website](https://github.com/svelteid/website).
 
 ```bash
+# get this template
+git clone https://github.com/rommyarb/sapper-tailwindcss-ts-starter.git
+
 # install dependencies
 yarn
 
