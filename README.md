@@ -7,13 +7,13 @@ Sapper starter template, inspired by [svelteid/website](https://github.com/svelt
 git clone https://github.com/rommyarb/sapper-tailwindcss-ts-starter.git
 
 # install dependencies
-yarn
+npm install
 
 # start local development
-yarn dev
+npm run dev
 
 # publish/deploy
-yarn export
+npm run export
 ```
 
 ## Features
