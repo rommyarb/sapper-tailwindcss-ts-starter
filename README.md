@@ -1,4 +1,8 @@
-# Sapper + TailwindCSS + TypeScript Starter
+<p align="center">
+<img src="static/images/logo.png" width="120"/>
+</p>
+
+<h1 align="center">Sapper + TailwindCSS + TypeScript Starter</h1>
 
 Sapper starter template, inspired by [svelteid/website](https://github.com/svelteid/website).
 
